@@ -20,7 +20,7 @@ function Mybookings() {
     const user = JSON.parse(localStorage.getItem('user'));
     if (user) {
       axios
-        .get(`http://localhost:7000/user/getbookings/${user.id}`)
+        .get(`https://darshan-ease-2.onrender.com/user/getbookings/${user.id}`)
         .then((response) => {
           const taskData = response.data;
           setItems(taskData);
@@ -45,7 +45,7 @@ function Mybookings() {
     imagePromises.push(
       new Promise((resolve) => {
         const img = new Image();
-        img.src = `http://localhost:7000/organizer/${item.templeImage}`;
+        img.src = `https://darshan-ease-2.onrender.com/organizer/${item.templeImage}`;
         img.onload = () => resolve(img);
       })
     );
@@ -110,7 +110,7 @@ function Mybookings() {
               >
                 <div style={{ display: 'flex', justifyContent: 'space-around',}} ref={pdref}>
                   <div>
-                    <img src={`http://localhost:7000/organizer/${item.templeImage}`} style={{ height: '80px' }} />
+                    <img src={`https://darshan-ease-2.onrender.com/organizer/${item.templeImage}`} style={{ height: '80px' }} />
                   </div>
                   {/* ... Other details */}
                   <div >

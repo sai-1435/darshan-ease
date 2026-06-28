@@ -16,7 +16,7 @@ const Alogin = () => {
     e.preventDefault();
     let payload = { email, password };
     axios
-      .post("http://localhost:7000/admin/alogin", payload)
+      .post("https://darshan-ease-2.onrender.com/admin/alogin", payload)
       .then((res) => {
         console.log("login: " + res.data.Status);
         if (res.data.Status === "Success") {

@@ -22,7 +22,7 @@ function Ohome() {
       console.log(user)
       if (user) {
         axios
-          .get(`http://localhost:7000/organizer/gettemple/${user.id}`)
+          .get(`https://darshan-ease-2.onrender.com/organizer/gettemple/${user.id}`)
           .then((response) => {
             console.log('Response data:', response.data); // Log the response data
             const taskData = response.data;
@@ -36,7 +36,7 @@ function Ohome() {
       }
 
       // Fetch darshans data
-     axios.get(`http://localhost:7000/organizer/getdarshans/${user.id}`)
+     axios.get(`https://darshan-ease-2.onrender.com/organizer/getdarshans/${user.id}`)
     .then((response) => {
       setDarshans(response.data);
     })
@@ -45,7 +45,7 @@ function Ohome() {
     });
 
      // Fetch bookings data
-     axios.get(`http://localhost:7000/organizer/getorganizerbookings/${user.id}`)
+     axios.get(`https://darshan-ease-2.onrender.com/organizer/getorganizerbookings/${user.id}`)
     .then((response) => {
       setBookings(response.data);
     })

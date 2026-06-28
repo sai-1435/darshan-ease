@@ -11,7 +11,7 @@
 
 //   useEffect(() => {
 //     axios
-//       .get(`http://localhost:7000/organizer/gettemples/`)
+//       .get(`https://darshan-ease-2.onrender.com/organizer/gettemples/`)
 //       .then((response) => {
 //         const templeData = response.data;
 //         setItems(templeData);
@@ -64,7 +64,7 @@
 //   {filteredItems.map((item) => (
 //     <div key={item._id} className="bg-white p-4 rounded shadow">
 //       <img
-//         src={`http://localhost:7000/${item.templeImage}`}
+//         src={`https://darshan-ease-2.onrender.com/${item.templeImage}`}
 //         alt="Item Image"
 //         className="rounded-t-lg"
 //         style={{ height: '350px', width: '500px' }}
@@ -109,7 +109,7 @@ const Utemples = () => {
   useEffect(() => {
    
       axios
-        .get(`http://localhost:7000/organizer/gettemples/`)
+        .get(`https://darshan-ease-2.onrender.com/organizer/gettemples/`)
         .then((response) => {
           const templeData = response.data;
           setItems(templeData);
@@ -122,7 +122,7 @@ const Utemples = () => {
   }, []);
 
   const deleteItem = (id) => {
-    axios.delete(`http://localhost:7000/eventdelete/${id}`);
+    axios.delete(`https://darshan-ease-2.onrender.com/eventdelete/${id}`);
     window.location.assign('/myevents');
     alert('Temple is deleted');
   };
@@ -139,7 +139,7 @@ const Utemples = () => {
             <div key={item._id} className="bg-white p-4 rounded shadow" >
                 <div     >
               <img
-                src={`http://localhost:7000/organizer/${item.templeImage}`}
+                src={`https://darshan-ease-2.onrender.com/organizer/${item.templeImage}`}
                 alt="Temple Image"
                 // className="rounded-t-lg w-full object-cover mb-4"
                 style={{ height: '200px',width:"400px"}}

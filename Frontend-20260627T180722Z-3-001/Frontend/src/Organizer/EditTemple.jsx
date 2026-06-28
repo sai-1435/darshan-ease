@@ -17,7 +17,7 @@ function EditTemple() {
       const navigate = useNavigate();
     
       useEffect(() => {
-        axios.get(`http://localhost:7000/organizer/gettemplebyid/${id}`)
+        axios.get(`https://darshan-ease-2.onrender.com/organizer/gettemplebyid/${id}`)
           .then(response => {
             const templeData = response.data;
             setFormData({
@@ -55,7 +55,7 @@ function EditTemple() {
           formDataToSend.append('location', formData.location);
           formDataToSend.append('templeImage', formData.templeImage);
     
-          await axios.put(`http://localhost:7000/organizer/updatetemple/${id}`, formDataToSend);
+          await axios.put(`https://darshan-ease-2.onrender.com/organizer/updatetemple/${id}`, formDataToSend);
           alert('Temple updated successfully');
           navigate('/mytemple');
         } catch (error) {

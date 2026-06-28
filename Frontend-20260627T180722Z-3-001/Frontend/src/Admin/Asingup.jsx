@@ -15,7 +15,7 @@ const Asignup = () => {
     let payload = { name, email, password };
 
     axios
-      .post("http://localhost:7000/admin/asignup", payload)
+      .post("https://darshan-ease-2.onrender.com/admin/asignup", payload)
       .then((result) =>{
         alert('Account created')
         console.log(result)

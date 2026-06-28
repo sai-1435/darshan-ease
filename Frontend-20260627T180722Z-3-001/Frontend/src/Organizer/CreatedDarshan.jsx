@@ -29,7 +29,7 @@ function CreatedDarshan() {
     const user = JSON.parse(localStorage.getItem('user'));
     if (user) {
       axios
-        .get(`http://localhost:7000/organizer/gettemple/${user.id}`)
+        .get(`https://darshan-ease-2.onrender.com/organizer/gettemple/${user.id}`)
         .then((response) => {
           const templeData = response.data;
           setItems(templeData);
@@ -82,7 +82,7 @@ function CreatedDarshan() {
 
       formDataToSend.open = moment.tz(formData.open, 'HH:mm', 'Asia/Kolkata').format('hh:mm A');
       formDataToSend.close = moment.tz(formData.close, 'HH:mm', 'Asia/Kolkata').format('hh:mm A');
-      await axios.post('http://localhost:7000/organizer/createdarshan', formDataToSend);
+      await axios.post('https://darshan-ease-2.onrender.com/organizer/createdarshan', formDataToSend);
       alert('darshan added successfully');
       console.log("Darshan created");
       navigate('/odarshans');

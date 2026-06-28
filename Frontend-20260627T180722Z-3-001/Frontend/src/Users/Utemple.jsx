@@ -12,7 +12,7 @@ const Utemple = () => {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:7000/organizer/gettemplebyid/${id}`)
+        axios.get(`https://darshan-ease-2.onrender.com/organizer/gettemplebyid/${id}`)
             .then((resp) => {
                 console.log(resp);
                 setItem(resp.data); // Set item to the fetched data (an object, not an array)
@@ -20,7 +20,7 @@ const Utemple = () => {
                 // Fetch darshan data using the organizerId from the item
                 const organizerId = resp.data.organizerId;
                 console.log(organizerId)
-                axios.get(`http://localhost:7000/organizer/getdarshans/${organizerId}`)
+                axios.get(`https://darshan-ease-2.onrender.com/organizer/getdarshans/${organizerId}`)
                     .then((response) => {
                         const darshanData = response.data;
                         setDarshan(darshanData);
@@ -46,7 +46,7 @@ const Utemple = () => {
             {item && (
                 <div>
                     <div style={{ display: "flex", justifyContent: "center", height: "300px" }} >
-                        <img src={`http://localhost:7000/organizer/${item?.templeImage}`} width="500px"  />
+                        <img src={`https://darshan-ease-2.onrender.com/organizer/${item?.templeImage}`} width="500px"  />
                     </div>
                     <h1 className='text-center'> {item.eventName}</h1>
                     <div style={{ display: 'flex', justifyContent: 'space-around' }}>

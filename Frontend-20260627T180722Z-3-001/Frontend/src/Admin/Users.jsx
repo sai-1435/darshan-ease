@@ -21,7 +21,7 @@ const Users = () => {
   };
 
    useEffect(() => {
-    axios.get(`http://localhost:7000/user/users`)
+    axios.get(`https://darshan-ease-2.onrender.com/user/users`)
       .then((response) => {
         setUsers(response.data);
         // setLoading(false);
@@ -33,12 +33,12 @@ const Users = () => {
 }, []);
 
 const deleteData = (taskId) => {
-    axios.delete(`http://localhost:7000/user/userdelete/${taskId}`);
+    axios.delete(`https://darshan-ease-2.onrender.com/user/userdelete/${taskId}`);
     window.location.assign('/users');
     alert('User is deleted');
   };
   const deleteorder = (taskId) => {
-    axios.delete(`http://localhost:7000/user/userbookingdelete/${taskId}`);
+    axios.delete(`https://darshan-ease-2.onrender.com/user/userbookingdelete/${taskId}`);
     window.location.assign('/users');
     alert('deleted');
   };
@@ -46,7 +46,7 @@ const deleteData = (taskId) => {
 
   const fetchUserBikeData = (userId) => {
    
-    axios.get(`http://localhost:7000/user/getbookings/${userId}`)
+    axios.get(`https://darshan-ease-2.onrender.com/user/getbookings/${userId}`)
 
     .then((response) => {
       setUserbookings(response.data);
@@ -128,7 +128,7 @@ const deleteData = (taskId) => {
                               >
                                 <div style={{ display: 'flex', justifyContent: 'space-around' }}>
                                   <div >
-                                  <img src={`http://localhost:7000/organizer/${item?.templeImage}`} style={{ height: "80px",width:"120px" }} /> 
+                                  <img src={`https://darshan-ease-2.onrender.com/organizer/${item?.templeImage}`} style={{ height: "80px",width:"120px" }} /> 
                                   </div>
                                   <div>
                                     <p>Temple Name:</p>

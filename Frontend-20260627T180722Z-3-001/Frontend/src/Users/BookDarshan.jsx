@@ -28,7 +28,7 @@ function BookDarshan() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:7000/user/darshan/${id}`)
+    axios.get(`https://darshan-ease-2.onrender.com/user/darshan/${id}`)
       .then((resp) => {
         console.log('API Response:', resp.data);
         setItem(resp.data);
@@ -87,7 +87,7 @@ function BookDarshan() {
       updatedFormData.userName = username;
 
       // Post the updatedFormData
-      await axios.post('http://localhost:7000/user/userbooking', updatedFormData);
+      await axios.post('https://darshan-ease-2.onrender.com/user/userbooking', updatedFormData);
       console.log(updatedFormData);
       alert('booked successfully');
       navigate('/mybookings');

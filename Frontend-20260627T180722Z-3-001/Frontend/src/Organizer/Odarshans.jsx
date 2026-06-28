@@ -14,7 +14,7 @@ const Odarshans = () => {
     const user = JSON.parse(localStorage.getItem('user'));
     if (user) {
       axios
-        .get(`http://localhost:7000/organizer/getdarshans/${user.id}`)
+        .get(`https://darshan-ease-2.onrender.com/organizer/getdarshans/${user.id}`)
         .then((response) => {
           const templeData = response.data;
           setItems(templeData);
@@ -29,7 +29,7 @@ const Odarshans = () => {
   }, []);
 
   const deleteItem = (id) => {
-    axios.delete(`http://localhost:7000/eventdelete/${id}`);
+    axios.delete(`https://darshan-ease-2.onrender.com/eventdelete/${id}`);
     window.location.assign('/myevents');
     alert('Temple is deleted');
   };
@@ -55,7 +55,7 @@ const Odarshans = () => {
             <div key={item._id} className="bg-white p-4 rounded shadow" >
                 {/* <div     >
               <img
-                src={`http://localhost:7000/organizer/${item.templeImage}`}
+                src={`https://darshan-ease-2.onrender.com/organizer/${item.templeImage}`}
                 alt="Temple Image"
                 // className="rounded-t-lg w-full object-cover mb-4"
                 style={{ height: '250px',width:"500px"}}
